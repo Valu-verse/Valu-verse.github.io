@@ -1,6 +1,6 @@
 {
-  "version": "3.6.0",
-  "created": "2025-05-09T13:57:46Z",
+  "version": "3.11.0",
+  "created": "2025-09-18T15:09:25Z",
   "files": [
     {
       "path": ".nojekyll"
@@ -12,7 +12,25 @@
       "path": "assets\\downloadwallet.png"
     },
     {
+      "path": "assets\\getidqrcode.png"
+    },
+    {
       "path": "assets\\walletintro.png"
+    },
+    {
+      "path": "assets\\walletintro2.png"
+    },
+    {
+      "path": "assets\\walletintro3.png"
+    },
+    {
+      "path": "categories\\concepts\\index.html"
+    },
+    {
+      "path": "categories\\index.html"
+    },
+    {
+      "path": "categories\\tutorials\\index.html"
     },
     {
       "path": "index.html"
@@ -31,6 +49,12 @@
     },
     {
       "path": "resources\\js\\lunr.js"
+    },
+    {
+      "path": "resources\\js\\mermaid.js"
+    },
+    {
+      "path": "resources\\js\\prism.js"
     },
     {
       "path": "resources\\js\\retype.js"
@@ -60,13 +84,40 @@
       "path": "sitemap.xml.gz"
     },
     {
+      "path": "tags\\blockchain\\index.html"
+    },
+    {
+      "path": "tags\\digital-assets\\index.html"
+    },
+    {
+      "path": "tags\\identity\\index.html"
+    },
+    {
+      "path": "tags\\index.html"
+    },
+    {
+      "path": "tags\\nft\\index.html"
+    },
+    {
+      "path": "tags\\ticketing\\index.html"
+    },
+    {
       "path": "uiux\\index.html"
+    },
+    {
+      "path": "uiux\\mobileappgetfreeid\\index.html"
     },
     {
       "path": "uiux\\mobileappsetup\\index.html"
     },
     {
       "path": "valu_wallet.png"
+    },
+    {
+      "path": "verusticketing\\index.html"
+    },
+    {
+      "path": "verusticketing\\ticket-creation-methods\\index.html"
     }
   ]
 }

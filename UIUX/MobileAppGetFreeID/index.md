@@ -1,11 +1,12 @@
-# Installing the Mobile wallet
+# Receiving a free ID
 
-#### Step 1 locating the download link
+#### Getting a Free ID
 
 TODO:
 - [ ] Create website Link for Valu Wallet download
+- [ ] How should we get the QR Code to the user (Without the service being bale to be spammed)
 
-![](/assets/downloadwallet.png)
+![](/assets/getidqrcode.png)
 
 #### Step 2 Running the Mobile app
 

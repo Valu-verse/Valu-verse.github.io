@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.11.0.811523363857">
+
+    <!-- See retype.com -->
+    <meta name="generator" content="Retype 3.11.0">
+
+    <!-- Primary Meta Tags -->
+    <title>Creating Tickets on Verus Blockchain: A Comparative Analysis</title>
+    <meta name="title" content="Creating Tickets on Verus Blockchain: A Comparative Analysis">
+    <meta name="description" content="The Verus blockchain offers unique capabilities for creating digital tickets through its innovative identity system.">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="/verusticketing/ticket-creation-methods/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="/verusticketing/ticket-creation-methods/">
+    <meta property="og:title" content="Creating Tickets on Verus Blockchain: A Comparative Analysis">
+    <meta property="og:description" content="The Verus blockchain offers unique capabilities for creating digital tickets through its innovative identity system.">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="/verusticketing/ticket-creation-methods/">
+    <meta property="twitter:title" content="Creating Tickets on Verus Blockchain: A Comparative Analysis">
+    <meta property="twitter:description" content="The Verus blockchain offers unique capabilities for creating digital tickets through its innovative identity system.">
+
+    <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
+
+    <link href="../../resources/css/retype.css?v=3.11.0.811523363857" rel="stylesheet">
+
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.11.0.811523363857" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/retype.js?v=3.11.0" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.11.0.811523363857" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.11.0.811523363857" defer></script>
+    <script id="mermaid-js" data-cfasync="false" src="../../resources/js/mermaid.js?v=3.11.0" defer></script>
+</head>
+<body>
+    <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
+        <div class="absolute bottom-0 left-0" style="top: 5rem; right: 50%"></div>
+    
+        <header id="retype-header" class="sticky top-0 z-30 flex w-full h-16 bg-header-bg border-b border-header-border md:h-20">
+            <div class="container relative flex items-center justify-between pr-6 grow md:justify-start">
+                <!-- Mobile menu button skeleton -->
+                <button v-cloak class="skeleton retype-mobile-menu-button flex items-center justify-center shrink-0 overflow-hidden dark:text-white focus:outline-none rounded-full w-10 h-10 ml-3.5 md:hidden"><svg xmlns="http://www.w3.org/2000/svg" class="mb-px shrink-0" width="24" height="24" viewBox="0 0 24 24" role="presentation" style="margin-bottom: 0px;"><g fill="currentColor"><path d="M2 4h20v2H2zM2 11h20v2H2zM2 18h20v2H2z"></path></g></svg></button>
+                <div v-cloak id="retype-sidebar-left-toggle-button"></div>
+        
+                <!-- Logo -->
+                <div class="flex items-center justify-between h-full py-2 md:w-75">
+                    <div class="flex items-center px-2 md:px-6">
+                        <a id="retype-branding-logo" href="../../" class="flex items-center leading-snug text-2xl">
+                            <span class="dark:text-white font-bold line-clamp-1 md:line-clamp-2">Valu Mobile</span>
+                        </a><span id="retype-branding-label" class="inline-flex mt-1 px-2 py-1 ml-4 text-xs font-medium leading-none items-center rounded-md bg-branding-label-bg text-branding-label-text ring-1 ring-branding-label-border ring-inset md:inline-block">Docs</span>
+                    </div>
+        
+                    <span class="hidden h-8 border-r md:inline-block border-base-border"></span>
+                </div>
+        
+                <div class="flex justify-between md:grow">
+                    <!-- Top Nav -->
+                    <nav id="retype-header-nav" class="hidden md:flex">
+                        <ul class="flex flex-col mb-4 md:pl-16 md:mb-0 md:flex-row md:items-center">
+                            <li class="mr-6">
+                                <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text-weight hover:text-header-text-hover" href="https://retype.com/guides/getting-started/">Getting Started</a>
+                            </li>
+        
+                        </ul>
+                    </nav>
+        
+                    <!-- Header Right Skeleton -->
+                    <div v-cloak class="flex justify-end grow skeleton">
+        
+                        <!-- Search input mock -->
+                        <div class="relative hidden w-40 lg:block lg:max-w-sm lg:ml-auto">
+                            <div class="absolute flex items-center justify-center h-full pl-3 dark:text-dark-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon-base" width="16" height="16" viewBox="0 0 24 24" aria-labelledby="icon" role="presentation" style="margin-bottom: 1px;"><g fill="currentColor" ><path d="M21.71 20.29l-3.68-3.68A8.963 8.963 0 0020 11c0-4.96-4.04-9-9-9s-9 4.04-9 9 4.04 9 9 9c2.12 0 4.07-.74 5.61-1.97l3.68 3.68c.2.19.45.29.71.29s.51-.1.71-.29c.39-.39.39-1.03 0-1.42zM4 11c0-3.86 3.14-7 7-7s7 3.14 7 7c0 1.92-.78 3.66-2.04 4.93-.01.01-.02.01-.02.01-.01.01-.01.01-.01.02A6.98 6.98 0 0111 18c-3.86 0-7-3.14-7-7z" ></path></g></svg>
+                            </div>
+                            <input class="w-full h-10 placeholder-search-placeholder transition-colors duration-200 ease-in bg-search-bg border border-transparent rounded md:text-sm hover:border-search-border-hover focus:outline-none focus:border-search-border-focus" style="padding: 0.625rem 0.75rem 0.625rem 2rem" type="text" placeholder="Search">
+                        </div>
+        
+                        <!-- Mobile search button -->
+                        <div class="flex items-center justify-center w-10 h-10 lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="shrink-0 icon-base" width="20" height="20" viewBox="0 0 24 24" aria-labelledby="icon" role="presentation" style="margin-bottom: 0px;"><g fill="currentColor" ><path d="M21.71 20.29l-3.68-3.68A8.963 8.963 0 0020 11c0-4.96-4.04-9-9-9s-9 4.04-9 9 4.04 9 9 9c2.12 0 4.07-.74 5.61-1.97l3.68 3.68c.2.19.45.29.71.29s.51-.1.71-.29c.39-.39.39-1.03 0-1.42zM4 11c0-3.86 3.14-7 7-7s7 3.14 7 7c0 1.92-.78 3.66-2.04 4.93-.01.01-.02.01-.02.01-.01.01-.01.01-.01.02A6.98 6.98 0 0111 18c-3.86 0-7-3.14-7-7z" ></path></g></svg>
+                        </div>
+        
+                        <!-- Dark mode switch placeholder -->
+                        <div class="w-10 h-10 lg:ml-2"></div>
+        
+                        <!-- History button -->
+                        <div class="flex items-center justify-center w-10 h-10" style="margin-right: -0.625rem;">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="shrink-0 icon-base" width="22" height="22" viewBox="0 0 24 24" aria-labelledby="icon" role="presentation" style="margin-bottom: 0px;"><g fill="currentColor" ><g ><path d="M12.01 6.01c-.55 0-1 .45-1 1V12a1 1 0 00.4.8l3 2.22a.985.985 0 001.39-.2.996.996 0 00-.21-1.4l-2.6-1.92V7.01c.02-.55-.43-1-.98-1z"></path><path d="M12.01 1.91c-5.33 0-9.69 4.16-10.05 9.4l-.29-.26a.997.997 0 10-1.34 1.48l1.97 1.79c.19.17.43.26.67.26s.48-.09.67-.26l1.97-1.79a.997.997 0 10-1.34-1.48l-.31.28c.34-4.14 3.82-7.41 8.05-7.41 4.46 0 8.08 3.63 8.08 8.09s-3.63 8.08-8.08 8.08c-2.18 0-4.22-.85-5.75-2.4a.996.996 0 10-1.42 1.4 10.02 10.02 0 007.17 2.99c5.56 0 10.08-4.52 10.08-10.08.01-5.56-4.52-10.09-10.08-10.09z"></path></g></g></svg>
+                        </div>
+                    </div>
+        
+                    <div v-cloak class="flex justify-end grow">
+                        <div id="retype-mobile-search-button"></div>
+                        <doc-search-desktop></doc-search-desktop>
+        
+                        <doc-theme-switch class="lg:ml-2"></doc-theme-switch>
+                        <doc-history></doc-history>
+                    </div>
+                </div>
+            </div>
+        </header>
+    
+    
+        <div id="retype-container" class="container relative flex bg-white">
+            <!-- Sidebar Skeleton -->
+            <div v-cloak class="fixed flex flex-col shrink-0 duration-300 ease-in-out bg-sidebar-left-bg border-sidebar-left-border sidebar top-20 w-75 border-r h-screen md:sticky transition-transform skeleton">
+            
+                <div class="flex items-center h-16 px-6">
+                    <input class="w-full h-8 px-3 py-2 transition-colors duration-200 ease-linear bg-filter-bg border border-filter-border rounded shadow-none text-sm focus:outline-none focus:border-filter-border-focus" type="text" placeholder="Filter">
+                </div>
+            
+                <div class="pl-6 mt-1 mb-4">
+                    <div class="w-32 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                    <div class="w-48 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                    <div class="w-40 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                    <div class="w-32 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                    <div class="w-48 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                    <div class="w-40 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                </div>
+            
+                <div class="shrink-0 mt-auto bg-transparent dark:border-base-border">
+                    <a class="flex items-center justify-center flex-nowrap h-16 text-gray-350 dark:text-dark-400 hover:text-gray-600 dark:hover:text-dark-300 transition-colors duration-150 ease-in docs-powered-by" target="_blank" href="https://retype.com/" rel="noopener">
+                        <span class="text-xs whitespace-nowrap">Powered by</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="ml-2" fill="currentColor" width="96" height="20" overflow="visible"><path d="M0 0v20h13.59V0H0zm11.15 17.54H2.44V2.46h8.71v15.08zM15.8 20h2.44V4.67L15.8 2.22zM20.45 6.89V20h2.44V9.34z"/><g><path d="M40.16 8.44c0 1.49-.59 2.45-1.75 2.88l2.34 3.32h-2.53l-2.04-2.96h-1.43v2.96h-2.06V5.36h3.5c1.43 0 2.46.24 3.07.73s.9 1.27.9 2.35zm-2.48 1.1c.26-.23.38-.59.38-1.09 0-.5-.13-.84-.4-1.03s-.73-.28-1.39-.28h-1.54v2.75h1.5c.72 0 1.2-.12 1.45-.35zM51.56 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92h4.74v1.83h-6.79V5.36h6.64zM60.09 7.15v7.48h-2.06V7.15h-2.61V5.36h7.28v1.79h-2.61zM70.81 14.64h-2.06v-3.66l-3.19-5.61h2.23l1.99 3.45 1.99-3.45H74l-3.19 5.61v3.66zM83.99 6.19c.65.55.97 1.4.97 2.55s-.33 1.98-1 2.51-1.68.8-3.04.8h-1.23v2.59h-2.06V5.36h3.26c1.42 0 2.45.28 3.1.83zm-1.51 3.65c.25-.28.37-.69.37-1.22s-.16-.92-.48-1.14c-.32-.23-.82-.34-1.5-.34H79.7v3.12h1.38c.68 0 1.15-.14 1.4-.42zM95.85 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92H96v1.83h-6.79V5.36h6.64z"/></g></svg>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Sidebar component -->
+            <doc-sidebar v-cloak>
+                <template #sidebar-footer>
+                    <div class="shrink-0 mt-auto border-t md:bg-transparent md:border-none dark:border-base-border">
+            
+                        <div class="py-3 px-6 md:hidden border-b dark:border-base-border">
+                            <nav>
+                                <ul class="flex flex-wrap justify-center items-center">
+                                    <li class="mr-6">
+                                        <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text-weight hover:text-header-text-hover" href="https://retype.com/guides/getting-started/">Getting Started</a>
+                                    </li>
+            
+                                </ul>
+                            </nav>
+                        </div>
+            
+                        <a class="flex items-center justify-center flex-nowrap h-16 text-gray-350 dark:text-dark-400 hover:text-gray-600 dark:hover:text-dark-300 transition-colors duration-150 ease-in docs-powered-by" target="_blank" href="https://retype.com/" rel="noopener">
+                            <span class="text-xs whitespace-nowrap">Powered by</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="ml-2" fill="currentColor" width="96" height="20" overflow="visible"><path d="M0 0v20h13.59V0H0zm11.15 17.54H2.44V2.46h8.71v15.08zM15.8 20h2.44V4.67L15.8 2.22zM20.45 6.89V20h2.44V9.34z"/><g><path d="M40.16 8.44c0 1.49-.59 2.45-1.75 2.88l2.34 3.32h-2.53l-2.04-2.96h-1.43v2.96h-2.06V5.36h3.5c1.43 0 2.46.24 3.07.73s.9 1.27.9 2.35zm-2.48 1.1c.26-.23.38-.59.38-1.09 0-.5-.13-.84-.4-1.03s-.73-.28-1.39-.28h-1.54v2.75h1.5c.72 0 1.2-.12 1.45-.35zM51.56 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92h4.74v1.83h-6.79V5.36h6.64zM60.09 7.15v7.48h-2.06V7.15h-2.61V5.36h7.28v1.79h-2.61zM70.81 14.64h-2.06v-3.66l-3.19-5.61h2.23l1.99 3.45 1.99-3.45H74l-3.19 5.61v3.66zM83.99 6.19c.65.55.97 1.4.97 2.55s-.33 1.98-1 2.51-1.68.8-3.04.8h-1.23v2.59h-2.06V5.36h3.26c1.42 0 2.45.28 3.1.83zm-1.51 3.65c.25-.28.37-.69.37-1.22s-.16-.92-.48-1.14c-.32-.23-.82-.34-1.5-.34H79.7v3.12h1.38c.68 0 1.15-.14 1.4-.42zM95.85 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92H96v1.83h-6.79V5.36h6.64z"/></g></svg>
+                        </a>
+                    </div>
+                </template>
+            </doc-sidebar>
+    
+            <div class="grow min-w-0 bg-body-bg">
+                <!-- Render "toolbar" template here on api pages --><!-- Render page content -->
+                <div class="flex">
+                    <div id="retype-main" class="min-w-0 p-4 grow md:px-16">
+                        <main class="relative pb-12 lg:pt-2">
+                            <div class="retype-markdown" id="retype-content">
+                                <!-- Rendered if sidebar right is enabled -->
+                                <div id="retype-sidebar-right-toggle"></div>
+                                <!-- Page content  -->
+<doc-anchor-target id="creating-tickets-on-verus-blockchain-a-comparative-analysis" class="break-words">
+    <h1>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#creating-tickets-on-verus-blockchain-a-comparative-analysis">#</doc-anchor-trigger>
+        <span>Creating Tickets on Verus Blockchain: A Comparative Analysis</span>
+    </h1>
+</doc-anchor-target>
+<div class="-mt-3 mb-12 flex flex-wrap text-sm text-gray-400 dark:text-dark-350 items-center print:justify-center">
+    <div>In&nbsp;</div>
+    <div><a href="../categories/concepts/">Concepts</a>,&nbsp;</div>
+    <div><a href="../categories/tutorials/">Tutorials</a></div>
+</div>
+
+<doc-anchor-target id="introduction">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#introduction">#</doc-anchor-trigger>
+        <span>Introduction</span>
+    </h2>
+</doc-anchor-target>
+<p>The Verus blockchain offers unique capabilities for creating digital tickets through its innovative identity system. This document explores two distinct approaches to ticket creation on Verus, examining their mechanisms, advantages, disadvantages, and practical implications for real-world ticketing systems.</p>
+<p>Unlike traditional blockchain approaches that rely on smart contracts, Verus provides native identity primitives that can serve as blockchain-native objects with built-in consensus validation. This fundamental difference opens up new possibilities for ticket creation and management.</p>
+<doc-anchor-target id="method-a-identity-based-tickets-id-as-ticket">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#method-a-identity-based-tickets-id-as-ticket">#</doc-anchor-trigger>
+        <span>Method A: Identity-Based Tickets (ID as Ticket)</span>
+    </h2>
+</doc-anchor-target>
+<doc-anchor-target id="overview">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#overview">#</doc-anchor-trigger>
+        <span>Overview</span>
+    </h3>
+</doc-anchor-target>
+<p>In this approach, each ticket is represented by a unique Verus Identity (ID). The ticket office creates individual IDs for each ticket, with the ID itself serving as the transferable ticket asset.</p>
+<doc-anchor-target id="how-it-works">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#how-it-works">#</doc-anchor-trigger>
+        <span>How It Works</span>
+    </h3>
+</doc-anchor-target>
+<div class="overflow-hidden mb-6 py-4 dark:px-5 dark:bg-white rounded-md"><pre translate="no" class="mermaid w-full">graph TD
+    A[&quot;Ticket Office&quot;] --&gt; B[&quot;Create Parent ID:&lt;br/&gt;greendayconcert2025@&quot;]
+    B --&gt; C[&quot;Register Name Commitment&lt;br/&gt;for Each Ticket&quot;]
+    C --&gt; D[&quot;Register Individual&lt;br/&gt;Ticket IDs&quot;]
+    D --&gt; E[&quot;ticket1.greendayconcert2025@&quot;]
+    D --&gt; F[&quot;ticket2.greendayconcert2025@&quot;]
+    D --&gt; G[&quot;ticket3.greendayconcert2025@&quot;]
+    E --&gt; H[&quot;Transfer Primary Addresses&lt;br/&gt;to Customer&quot;]
+    F --&gt; H
+    G --&gt; H
+    H --&gt; I[&quot;Customer Controls&lt;br/&gt;Ticket ID&quot;]
+    I --&gt; J[&quot;Ticket Can Be&lt;br/&gt;Transferred Again&quot;]</pre></div>
+<doc-anchor-target id="process-flow">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#process-flow">#</doc-anchor-trigger>
+        <span>Process Flow:</span>
+    </h4>
+</doc-anchor-target>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-none"><code v-pre class="language-none">
+#### Process Flow:
+
+1. **Parent ID Creation**: Ticket office creates a parent identity (e.g., `greendayconcert2025@`)
+2. **Ticket ID Minting**: For each ticket, create a sub-identity (e.g., `ticket1.greendayconcert2025@`)
+3. **Multi-signature Setup**: Configure primary addresses with up to 15 keys
+4. **Shared Control Option**: Include both ticket office and customer addresses for hybrid control
+5. **Transfer Mechanism**: Update primary addresses to transfer ownership
+
+#### Technical Implementation:
+
+```bash
+# Step 1: Register name commitment for ticket
+verus -chain=vrsctest registernamecommitment &quot;ticket1&quot; &quot;TicketOfficeAddress&quot; &quot;&quot; &quot;greendayconcert2025&quot;
+
+# Step 2: Register the ticket identity
+verus -chain=vrsctest registeridentity '{
+  &quot;txid&quot;: &quot;commitment_txid&quot;,
+  &quot;namereservation&quot;: {...},
+  &quot;identity&quot;: {
+    &quot;name&quot;: &quot;ticket1.greendayconcert2025&quot;,
+    &quot;primaryaddresses&quot;: [&quot;TicketOfficeAddress&quot;, &quot;CustomerAddress&quot;],
+    &quot;minimumsignatures&quot;: 2,
+    &quot;contentmultimap&quot;: {
+      &quot;event_details&quot;: &quot;Green Day Concert 2025...&quot;,
+      &quot;seat_info&quot;: &quot;Section A, Row 5, Seat 12&quot;,
+      &quot;price&quot;: &quot;$150.00&quot;
+    }
+  }
+}'
+
+# Step 3: Transfer ticket by updating primary addresses
+verus -chain=vrsctest updateidentity '{
+  &quot;name&quot;: &quot;ticket1.greendayconcert2025&quot;,
+  &quot;primaryaddresses&quot;: [&quot;NewOwnerAddress&quot;]
+}'</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="pros-and-cons">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#pros-and-cons">#</doc-anchor-trigger>
+        <span>Pros and Cons</span>
+    </h3>
+</doc-anchor-target>
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>Pros</th>
+<th>Cons</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="docs-emoji">&#x2705;</span> <strong>Native Blockchain Support</strong>: IDs are blockchain primitives with consensus validation</td>
+<td><span class="docs-emoji">&#x274C;</span> <strong>Transaction Costs</strong>: Each ticket requires 2+ blockchain transactions</td>
+</tr>
+<tr>
+<td><span class="docs-emoji">&#x2705;</span> <strong>True Ownership</strong>: Complete control transfer without intermediaries</td>
+<td><span class="docs-emoji">&#x274C;</span> <strong>Scalability Issues</strong>: Creating 1000s of tickets becomes trickier</td>
+</tr>
+<tr>
+<td><span class="docs-emoji">&#x2705;</span> <strong>Rich Data Storage</strong>: Up to ~4KB of data per ticket in contentmap</td>
+<td><span class="docs-emoji">&#x274C;</span> <strong>Complex Mass Creation</strong>: Difficult to automate large-scale ticket generation until more software tools available</td>
+</tr>
+<tr>
+<td><span class="docs-emoji">&#x2705;</span> <strong>Multi-signature Capability</strong>: Flexible control structures (1-15 keys)</td>
+<td><span class="docs-emoji">&#x274C;</span> <strong>Update Transaction Fees</strong>: Each transfer requires blockchain transaction</td>
+</tr>
+<tr>
+<td><span class="docs-emoji">&#x2705;</span> <strong>Wallet Integration</strong>: Current Valu Mobile app supports ID transfers</td>
+<td><span class="docs-emoji">&#x274C;</span> <strong>Technical Complexity</strong>: Requires blockchain interaction knowledge</td>
+</tr>
+<tr>
+<td><span class="docs-emoji">&#x2705;</span> <strong>Immutable Proof</strong>: Blockchain-verified ownership and authenticity</td>
+<td><span class="docs-emoji">&#x274C;</span> <strong>Time Dependency</strong>: Must wait for block confirmations</td>
+</tr>
+<tr>
+<td><span class="docs-emoji">&#x2705;</span> <strong>No Intermediary Risk</strong>: Direct peer-to-peer transfers possible</td>
+<td><span class="docs-emoji">&#x274C;</span> <strong>Lost Key Risk</strong>: If private keys are lost, ticket is permanently inaccessible</td>
+</tr>
+</tbody>
+</table>
+</div>
+<doc-anchor-target id="method-b-attestation-based-tickets-signed-data-objects">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#method-b-attestation-based-tickets-signed-data-objects">#</doc-anchor-trigger>
+        <span>Method B: Attestation-Based Tickets (Signed Data Objects)</span>
+    </h2>
+</doc-anchor-target>
+<doc-anchor-target id="overview-1">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#overview-1">#</doc-anchor-trigger>
+        <span>Overview</span>
+    </h3>
+</doc-anchor-target>
+<p>This method uses existing user identities and creates signed data objects (attestations) that represent tickets. The ticket office signs ticket data with their identity, creating a verifiable claim of ownership.</p>
+<doc-anchor-target id="how-it-works-1">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#how-it-works-1">#</doc-anchor-trigger>
+        <span>How It Works</span>
+    </h3>
+</doc-anchor-target>
+<div class="overflow-hidden mb-6 py-4 dark:px-5 dark:bg-white rounded-md"><pre translate="no" class="mermaid w-full">graph TD
+    A[User has existing ID: johnDoe@] --&gt; B[Purchases Ticket]
+    B --&gt; C[Ticket Office creates signed data object]
+    C --&gt; D[Data Object Contains:]
+    D --&gt; E[Ticket Details]
+    D --&gt; F[Owner ID: johnDoe@]
+    D --&gt; G[Unique Ticket Number]
+    D --&gt; H[Event Information]
+    C --&gt; I[Signed by: ticketmaster@]
+    I --&gt; J[Ticket Delivered as Attestation]
+    J --&gt; K[Stored in User's Wallet]
+    K --&gt; L[Transfer requires re-issuance]</pre></div>
+<doc-anchor-target id="process-flow-1">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#process-flow-1">#</doc-anchor-trigger>
+        <span>Process Flow:</span>
+    </h4>
+</doc-anchor-target>
+<ol>
+<li><strong>User Identity</strong>: Customer uses existing Verus ID (e.g., <code v-pre>johnDoe@</code>)</li>
+<li><strong>Ticket Creation</strong>: Ticket office creates signed data object off-chain</li>
+<li><strong>Digital Signature</strong>: Object signed by ticket office&#x27;s ID at specific block height</li>
+<li><strong>Delivery</strong>: Signed ticket object sent to customer&#x27;s wallet</li>
+<li><strong>Verification</strong>: Blockchain validates signature and ticket office identity</li>
+</ol>
+<doc-anchor-target id="technical-implementation">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#technical-implementation">#</doc-anchor-trigger>
+        <span>Technical Implementation:</span>
+    </h4>
+</doc-anchor-target>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-json"><code v-pre class="language-json">{
+  &quot;ticket_object&quot;: {
+    &quot;ticket_id&quot;: &quot;GT2025-NYC-A05-012&quot;,
+    &quot;event&quot;: &quot;Green Day Concert 2025&quot;,
+    &quot;venue&quot;: &quot;Madison Square Garden&quot;,
+    &quot;date&quot;: &quot;2025-05-15T20:00:00Z&quot;,
+    &quot;seat&quot;: &quot;Section A, Row 5, Seat 12&quot;,
+    &quot;price&quot;: &quot;$150.00&quot;,
+    &quot;owner_id&quot;: &quot;johnDoe@&quot;,
+    &quot;issued_height&quot;: 255187,
+    &quot;terms&quot;: &quot;Non-refundable, non-transferable without re-issuance&quot;
+  },
+  &quot;signature&quot;: {
+    &quot;signer&quot;: &quot;ticketmaster@&quot;,
+    &quot;signature_data&quot;: &quot;3045022100...&quot;,
+    &quot;block_height&quot;: 255187,
+    &quot;timestamp&quot;: &quot;2025-05-01T10:30:00Z&quot;
+  },
+  &quot;merkle_proof&quot;: {
+    &quot;hash&quot;: &quot;a7b8c9d0e1f2...&quot;,
+    &quot;proof_chain&quot;: [&quot;...&quot;, &quot;...&quot;, &quot;...&quot;]
+  }
+}</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="pros-and-cons-1">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#pros-and-cons-1">#</doc-anchor-trigger>
+        <span>Pros and Cons</span>
+    </h3>
+</doc-anchor-target>
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>Pros</th>
+<th>Cons</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="docs-emoji">&#x2705;</span> <strong>Cost Effective</strong>: No blockchain transactions for ticket creation</td>
+<td><span class="docs-emoji">&#x274C;</span> <strong>Transfer Complexity</strong>: Requires re-issuance for transfers</td>
+</tr>
+<tr>
+<td><span class="docs-emoji">&#x2705;</span> <strong>Mass Creation</strong>: Easy to generate thousands of tickets offline</td>
+<td><span class="docs-emoji">&#x274C;</span> <strong>Intermediary Dependency</strong>: Ticket office must facilitate transfers if change of personal details on ticket</td>
+</tr>
+<tr>
+<td><span class="docs-emoji">&#x2705;</span> <strong>Instant Generation</strong>: No waiting for block confirmations</td>
+<td><span class="docs-emoji">&#x274C;</span> <strong>Software Limitations</strong>: Current wallet apps need ticket-specific features</td>
+</tr>
+<tr>
+<td><span class="docs-emoji">&#x2705;</span> <strong>Existing Infrastructure</strong>: Uses current attestation/claim systems</td>
+<td><span class="docs-emoji">&#x274C;</span> <strong>Privacy Concerns</strong>: All recipient info needed at purchase time</td>
+</tr>
+<tr>
+<td><span class="docs-emoji">&#x2705;</span> <strong>Flexible Data</strong>: Can contain any structured ticket information</td>
+<td><span class="docs-emoji">&#x274C;</span> <strong>Limited Autonomy</strong>: Users can&#x27;t independently transfer tickets</td>
+</tr>
+<tr>
+<td><span class="docs-emoji">&#x2705;</span> <strong>Zero Knowledge</strong>: Supports ZK attestations and merkle proofs</td>
+<td><span class="docs-emoji">&#x274C;</span> <strong>Trust Requirements</strong>: Relies on ticket office&#x27;s continued operation</td>
+</tr>
+<tr>
+<td><span class="docs-emoji">&#x2705;</span> <strong>Offline Capability</strong>: Tickets work without constant blockchain access</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<doc-anchor-target id="detailed-comparison-matrix">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#detailed-comparison-matrix">#</doc-anchor-trigger>
+        <span>Detailed Comparison Matrix</span>
+    </h2>
+</doc-anchor-target>
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Method A (ID as Ticket)</th>
+<th>Method B (Signed Objects)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Creation Cost</strong></td>
+<td>(2+ transactions per ticket)</td>
+<td>Low (off-chain creation)</td>
+</tr>
+<tr>
+<td><strong>Scalability</strong></td>
+<td>Limited by blockchain throughput possibly</td>
+<td>Highly scalable</td>
+</tr>
+<tr>
+<td><strong>Transfer Method</strong></td>
+<td>Blockchain transaction required</td>
+<td>Re-issuance by ticket office</td>
+</tr>
+<tr>
+<td><strong>User Autonomy</strong></td>
+<td>Complete ownership control</td>
+<td>Dependent on ticket office, or new software to re-sign tickets</td>
+</tr>
+<tr>
+<td><strong>Technical Complexity</strong></td>
+<td>High (blockchain interactions)</td>
+<td>Medium (signature verification)</td>
+</tr>
+<tr>
+<td><strong>Wallet Support</strong></td>
+<td>Currently supported</td>
+<td>Requires development</td>
+</tr>
+<tr>
+<td><strong>Mass Distribution</strong></td>
+<td>Challenging</td>
+<td>Easy</td>
+</tr>
+<tr>
+<td><strong>Dispute Resolution</strong></td>
+<td>Blockchain immutability</td>
+<td>Requires ticket office arbitration</td>
+</tr>
+<tr>
+<td><strong>Secondary Market</strong></td>
+<td>Natural peer-to-peer</td>
+<td>Controlled by ticket office</td>
+</tr>
+</tbody>
+</table>
+</div>
+<doc-anchor-target id="use-case-scenarios">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#use-case-scenarios">#</doc-anchor-trigger>
+        <span>Use Case Scenarios</span>
+    </h2>
+</doc-anchor-target>
+<doc-anchor-target id="large-venue-concert-10000-tickets">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#large-venue-concert-10000-tickets">#</doc-anchor-trigger>
+        <span>Large Venue Concert (10,000+ tickets)</span>
+    </h3>
+</doc-anchor-target>
+<p><strong>Method A Challenges:</strong></p>
+<ul>
+<li>~20,000 blockchain transactions needed</li>
+<li>Time requirement: BAtched up transactions take hours</li>
+<li>Infrastructure: Requires robust transaction management system</li>
+</ul>
+<p><strong>Method B Advantages:</strong></p>
+<ul>
+<li>Instant ticket generation</li>
+<li>Near-zero marginal cost per ticket</li>
+<li>Immediate distribution capability</li>
+<li>Scalable to any event size</li>
+</ul>
+<doc-anchor-target id="premiumvip-tickets-limited-quantity-high-value">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#premiumvip-tickets-limited-quantity-high-value">#</doc-anchor-trigger>
+        <span>Premium/VIP Tickets (Limited quantity, high value)</span>
+    </h3>
+</doc-anchor-target>
+<p><strong>Method A Advantages:</strong></p>
+<ul>
+<li>Provable scarcity and authenticity</li>
+<li>Complete ownership rights</li>
+<li>Resale market functionality</li>
+<li>Collectible value potential</li>
+</ul>
+<p><strong>Method B Limitations:</strong></p>
+<ul>
+<li>Harder to prove uniqueness</li>
+<li>Transfer restrictions may reduce value</li>
+<li>Less suitable for collector markets</li>
+</ul>
+<doc-anchor-target id="corporate-events-internal-distribution">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#corporate-events-internal-distribution">#</doc-anchor-trigger>
+        <span>Corporate Events (Internal distribution)</span>
+    </h3>
+</doc-anchor-target>
+<p><strong>Method A Considerations:</strong></p>
+<ul>
+<li>May be overkill for internal events</li>
+<li>High setup cost for single-use events</li>
+</ul>
+<p><strong>Method B Benefits:</strong></p>
+<ul>
+<li>Quick deployment</li>
+<li>Easy management</li>
+<li>Cost-effective for one-time events</li>
+<li>Simplified distribution to employee IDs</li>
+</ul>
+<doc-anchor-target id="future-development-considerations">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#future-development-considerations">#</doc-anchor-trigger>
+        <span>Future Development Considerations</span>
+    </h2>
+</doc-anchor-target>
+<doc-anchor-target id="software-requirements">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#software-requirements">#</doc-anchor-trigger>
+        <span>Software Requirements</span>
+    </h3>
+</doc-anchor-target>
+<p><strong>Method A:</strong></p>
+<ul>
+<li>Enhanced wallet transaction capabilities</li>
+<li>Batch transaction processing</li>
+<li>User-friendly ID management interfaces</li>
+</ul>
+<p><strong>Method B:</strong></p>
+<ul>
+<li>Ticket-specific wallet features</li>
+<li>Transfer request systems</li>
+<li>Enhanced attestation management</li>
+<li>QR code integration improvements</li>
+</ul>
+<doc-anchor-target id="technical-roadmap">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#technical-roadmap">#</doc-anchor-trigger>
+        <span>Technical Roadmap</span>
+    </h3>
+</doc-anchor-target>
+<ol>
+<li><p><strong>Short-term</strong> (2-4 weeks):</p>
+<ul>
+<li>Basic ticket object support in wallets</li>
+<li>Simple transfer request mechanisms</li>
+<li>QR code ticket display</li>
+</ul>
+</li>
+<li><p><strong>Medium-term</strong> (2-3 months):</p>
+<ul>
+<li>Batch ID creation tools</li>
+<li>Advanced ticket management features</li>
+<li>Secondary market interfaces</li>
+</ul>
+</li>
+<li><p><strong>Long-term</strong> (6-12 months):</p>
+<ul>
+<li>Advanced software integration</li>
+<li>Machine-readable ticket formats</li>
+</ul>
+</li>
+</ol>
+<doc-anchor-target id="economic-analysis">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#economic-analysis">#</doc-anchor-trigger>
+        <span>Economic Analysis</span>
+    </h2>
+</doc-anchor-target>
+<doc-anchor-target id="revenue-model-implications">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#revenue-model-implications">#</doc-anchor-trigger>
+        <span>Revenue Model Implications</span>
+    </h3>
+</doc-anchor-target>
+<p><strong>Method A:</strong></p>
+<ul>
+<li>Higher operational costs may require premium pricing</li>
+<li>Natural scarcity supports higher ticket values</li>
+<li>Resale market generates ongoing network activity</li>
+</ul>
+<p><strong>Method B:</strong></p>
+<ul>
+<li>Lower operational costs enable competitive pricing</li>
+<li>Centralized control over secondary markets</li>
+<li>Reduced infrastructure investment requirements</li>
+</ul>
+<doc-anchor-target id="security-analysis">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#security-analysis">#</doc-anchor-trigger>
+        <span>Security Analysis</span>
+    </h2>
+</doc-anchor-target>
+<doc-anchor-target id="attack-vectors">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#attack-vectors">#</doc-anchor-trigger>
+        <span>Attack Vectors</span>
+    </h3>
+</doc-anchor-target>
+<p><strong>Method A Vulnerabilities:</strong></p>
+<ul>
+<li>Private key compromise (permanent ticket loss)</li>
+<li>Replay attacks during transfers</li>
+<li>Blockchain reorganization risks</li>
+</ul>
+<p><strong>Method A Mitigations:</strong></p>
+<ul>
+<li>Multi-signature ticket IDs</li>
+<li>Confirmation requirements</li>
+</ul>
+<p><strong>Method B Vulnerabilities:</strong></p>
+<ul>
+<li>Ticket office key compromise (affects all tickets)</li>
+<li>Signature replay attacks</li>
+<li>Time-based signature validity issues</li>
+</ul>
+<p><strong>Method B Mitigations:</strong></p>
+<ul>
+<li>Key rotation policies</li>
+<li>Height-based signature validation</li>
+<li>Merkle tree attestations</li>
+</ul>
+<doc-anchor-target id="regulatory-and-compliance-considerations">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#regulatory-and-compliance-considerations">#</doc-anchor-trigger>
+        <span>Regulatory and Compliance Considerations</span>
+    </h2>
+</doc-anchor-target>
+<doc-anchor-target id="consumer-protection">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#consumer-protection">#</doc-anchor-trigger>
+        <span>Consumer Protection</span>
+    </h3>
+</doc-anchor-target>
+<p><strong>Method A:</strong></p>
+<ul>
+<li>Irreversible transactions may conflict with consumer rights</li>
+<li>Clear ownership transfer documentation</li>
+<li>Potential for permanent loss scenarios</li>
+</ul>
+<p><strong>Method B:</strong></p>
+<ul>
+<li>Ticket office retains some control for dispute resolution</li>
+<li>More traditional ticketing compliance alignment</li>
+<li>Easier refund/cancellation procedures</li>
+</ul>
+<doc-anchor-target id="anti-fraud-measures">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#anti-fraud-measures">#</doc-anchor-trigger>
+        <span>Anti-Fraud Measures</span>
+    </h3>
+</doc-anchor-target>
+<p><strong>Method A:</strong></p>
+<ul>
+<li>Blockchain immutability prevents ticket duplication</li>
+<li>Cryptographic proof of authenticity</li>
+<li>Transparent ownership history</li>
+</ul>
+<p><strong>Method B:</strong></p>
+<ul>
+<li>Digital signatures prevent forgery</li>
+<li>Centralized validation reduces fake tickets</li>
+<li>Ticket office control enables quick response to fraud</li>
+</ul>
+<doc-anchor-target id="conclusion">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#conclusion">#</doc-anchor-trigger>
+        <span>Conclusion</span>
+    </h2>
+</doc-anchor-target>
+<p>Both methods offer distinct advantages for different use cases:</p>
+<p><strong>Method A (ID as Ticket)</strong> excels in scenarios requiring:</p>
+<ul>
+<li>True decentralized ownership</li>
+<li>High-value or collectible tickets</li>
+<li>Secondary market functionality</li>
+<li>Maximum user autonomy</li>
+</ul>
+<p><strong>Method B (Signed Objects)</strong> is optimal for:</p>
+<ul>
+<li>Large-scale events</li>
+<li>Cost-sensitive operations</li>
+<li>Rapid deployment requirements</li>
+<li>Traditional ticketing business models</li>
+</ul>
+<p>The choice between methods should be based on specific event requirements, cost considerations, technical capabilities, and business model preferences. Many organizations may benefit from a hybrid approach, using Method B for general admission and Method A for premium or collectible tickets.</p>
+<p>As the Verus ecosystem continues to evolve, improvements in wallet software, batch processing capabilities, and user interfaces will likely make both methods more accessible and practical for mainstream adoption.</p>
+<hr>
+<p><em>This document represents a technical analysis as of September 2025. Verus protocol features and capabilities may evolve over time.</em></p>
+
+                                
+                                <!-- Required only on API pages -->
+                                <doc-toolbar-member-filter-no-results></doc-toolbar-member-filter-no-results>
+                            </div>
+                            <footer id="retype-content-footer" class="clear-both">
+                            
+                                <nav id="retype-nextprev" class="print:hidden flex mt-14">
+                                    <div class="w-1/2">
+                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../verusticketing/">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+                                            <span>
+                                                <span class="block text-xs font-normal text-base-text-muted">Previous</span>
+                                                <span class="block mt-1">Verus Ticketing</span>
+                                            </span>
+                                        </a>
+                                    </div>
+                            
+                                    <div class="w-1/2">
+                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../uiux/">
+                                            <span>
+                                                <span class="block text-xs font-normal text-right text-base-text-muted">Next</span>
+                                                <span class="block mt-1">UI UX</span>
+                                            </span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+                                        </a>
+                                    </div>
+                                </nav>
+                            </footer>
+                        </main>
+                
+                        <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
+                            <footer class="flex flex-wrap items-center justify-between print:justify-center">
+                                <div id="retype-footer-links" class="print:hidden">
+                                    <ul class="flex flex-wrap items-center text-sm">
+                                    </ul>
+                                </div>
+                                <div id="retype-copyright" class="print:justify-center py-2 text-footer-text font-footer-link-weight text-sm leading-relaxed"><p>© Copyright 2025. All rights reserved.</p></div>
+                            </footer>
+                        </div>
+                    </div>
+                
+                    <!-- Rendered if sidebar right is enabled -->
+                    <!-- Sidebar right skeleton-->
+                    <div v-cloak class="fixed top-0 bottom-0 right-0 translate-x-full bg-sidebar-right-bg border-sidebar-right-border lg:sticky lg:border-l lg:shrink-0 lg:pt-6 lg:transform-none sm:w-1/2 lg:w-64 lg:z-0 md:w-104 sidebar-right skeleton">
+                        <div class="pl-5">
+                            <div class="w-32 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                            <div class="w-48 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                            <div class="w-40 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                        </div>
+                    </div>
+                
+                    <!-- User should be able to hide sidebar right -->
+                    <doc-sidebar-right v-cloak></doc-sidebar-right>
+                </div>
+
+            </div>
+        </div>
+    
+        <doc-search-mobile></doc-search-mobile>
+        <doc-back-to-top></doc-back-to-top>
+    </div>
+
+
+    <div id="retype-overlay-target"></div>
+
+    <script data-cfasync="false">window.__DOCS__ = { "title": "Creating Tickets on Verus Blockchain: A Comparative Analysis", level: 2, icon: "file", hasPrism: true, hasMermaid: true, hasMath: false, tocDepth: 23 }</script>
+</body>
+</html>
