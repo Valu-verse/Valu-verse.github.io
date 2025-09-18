@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.11.0.811523363857">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.11.0.811523668050">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.11.0">
@@ -30,12 +30,12 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../resources/css/retype.css?v=3.11.0.811523363857" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=3.11.0.811523668050" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=3.11.0.811523363857" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.11.0.811523668050" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=3.11.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.11.0.811523363857" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.11.0.811523363857" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.11.0.811523668050" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.11.0.811523668050" defer></script>
     <script id="mermaid-js" data-cfasync="false" src="../../resources/js/mermaid.js?v=3.11.0" defer></script>
 </head>
 <body>
@@ -222,20 +222,27 @@
         <span>Process Flow:</span>
     </h4>
 </doc-anchor-target>
+<doc-anchor-target id="process-flow-1">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#process-flow-1">#</doc-anchor-trigger>
+        <span>Process Flow:</span>
+    </h4>
+</doc-anchor-target>
+<ol>
+<li><strong>Parent ID Creation</strong>: Ticket office creates a parent identity (e.g., <code v-pre>greendayconcert2025@</code>)</li>
+<li><strong>Ticket ID Minting</strong>: For each ticket, create a sub-identity (e.g., <code v-pre>ticket1.greendayconcert2025@</code>)</li>
+<li><strong>Multi-signature Setup</strong>: Configure primary addresses with up to 15 keys</li>
+<li><strong>Shared Control Option</strong>: Include both ticket office and customer addresses for hybrid control</li>
+<li><strong>Transfer Mechanism</strong>: Update primary addresses to transfer ownership</li>
+</ol>
+<doc-anchor-target id="technical-implementation">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#technical-implementation">#</doc-anchor-trigger>
+        <span>Technical Implementation:</span>
+    </h4>
+</doc-anchor-target>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre translate="no" class="language-none"><code v-pre class="language-none">
-#### Process Flow:
-
-1. **Parent ID Creation**: Ticket office creates a parent identity (e.g., `greendayconcert2025@`)
-2. **Ticket ID Minting**: For each ticket, create a sub-identity (e.g., `ticket1.greendayconcert2025@`)
-3. **Multi-signature Setup**: Configure primary addresses with up to 15 keys
-4. **Shared Control Option**: Include both ticket office and customer addresses for hybrid control
-5. **Transfer Mechanism**: Update primary addresses to transfer ownership
-
-#### Technical Implementation:
-
-```bash
-# Step 1: Register name commitment for ticket
+<pre translate="no" class="language-bash"><code v-pre class="language-bash"># Step 1: Register name commitment for ticket
 verus -chain=vrsctest registernamecommitment &quot;ticket1&quot; &quot;TicketOfficeAddress&quot; &quot;&quot; &quot;greendayconcert2025&quot;
 
 # Step 2: Register the ticket identity
@@ -337,9 +344,9 @@ verus -chain=vrsctest updateidentity '{
     I --&gt; J[Ticket Delivered as Attestation]
     J --&gt; K[Stored in User's Wallet]
     K --&gt; L[Transfer requires re-issuance]</pre></div>
-<doc-anchor-target id="process-flow-1">
+<doc-anchor-target id="process-flow-2">
     <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#process-flow-1">#</doc-anchor-trigger>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#process-flow-2">#</doc-anchor-trigger>
         <span>Process Flow:</span>
     </h4>
 </doc-anchor-target>
@@ -350,9 +357,9 @@ verus -chain=vrsctest updateidentity '{
 <li><strong>Delivery</strong>: Signed ticket object sent to customer&#x27;s wallet</li>
 <li><strong>Verification</strong>: Blockchain validates signature and ticket office identity</li>
 </ol>
-<doc-anchor-target id="technical-implementation">
+<doc-anchor-target id="technical-implementation-1">
     <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#technical-implementation">#</doc-anchor-trigger>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#technical-implementation-1">#</doc-anchor-trigger>
         <span>Technical Implementation:</span>
     </h4>
 </doc-anchor-target>
